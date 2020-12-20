@@ -14,11 +14,12 @@ map <Leader>k <Plug>(easymotion-k)
 " TODO add separate section for vscode
 
 " map  <Leader>f <Plug>(easymotion-bd-f)
-" nmap <Leader>f <Plug>(easymotion-overwin-f)
+"  Move to line over windows 
+nmap <Leader>F <Plug>(easymotion-overwin-f)
 
 " s{char}{char} to move to {char}{char}
 nmap <silent> s <Plug>(easymotion-s2)
-nmap <silent> S <Plug>(easymotion-overwin-f2)
+" nmap <silent> S <Plug>(easymotion-overwin-f2)
 " map  n <Plug>(easymotion-next)
 " map  N <Plug>(easymotion-prev)
 " nmap S <Plug>(easymotion-overwin-t)
@@ -33,7 +34,7 @@ nmap <silent> S <Plug>(easymotion-overwin-f2)
 
 " hi link EasyMotionTarget ErrorMsg
 " hi link EasyMotionShade  Comment
-let g:EasyMotion_prompt = '🔎 '
+" let g:EasyMotion_prompt = '🔎 '
 
 " hi link EasyMotionMoveHL Search
 " hi link EasyMotionIncSearch Search

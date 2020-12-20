@@ -13,7 +13,7 @@ set history=50
 set pumheight=10                        " Makes popup menu smaller
 set ruler
 set showcmd
-set incsearch " do incremental searching 
+set incsearch                           " Do incremental searching 
 set laststatus=2
 set autowrite
 set modelines=0
@@ -37,11 +37,8 @@ set laststatus=0                        " Always display the status line
 set number                              " Line numbers
 set relativenumber
 set numberwidth=4
-set nojoinspaces " use one space, not two, after punctuation 
-" set list listchars=tab:»·,trail:·,nbsp:· " Display extra whitespace
-" set list listchars=tab:»·,trail:·,nbsp:· " Display extra whitespace
-set list
-set listchars=tab:»·,trail:·,space:· " Display extra whitespace
+set nojoinspaces                        " use one space, not two, after punctuation 
+set list listchars=tab:»·,trail:·,space:· " Display extra whitespace
 " set listchars=eol:¬,tab:>·,trail:~,extends:>,precedes:<,space:.
 set tags^=.git/tags
 set splitbelow                          " Horizontal splits will automatically be below
