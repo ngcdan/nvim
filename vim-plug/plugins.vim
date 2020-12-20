@@ -66,6 +66,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'ntpeters/vim-better-whitespace'
     " Project manager 
     Plug 'mhinz/vim-startify'
+        " live server
+    Plug 'turbio/bracey.vim'
 
     call plug#end()
 
