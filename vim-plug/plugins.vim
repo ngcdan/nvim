@@ -43,7 +43,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'voldikss/vim-floaterm'
     " Snippets 
     Plug 'honza/vim-snippets'
-    Plug 'mattn/emmet-vim'
     " Close Tag
     Plug 'alvan/vim-closetag' 
     " Easymotion
@@ -66,6 +65,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'mhinz/vim-startify'
         " live server
     Plug 'turbio/bracey.vim'
+    "  linting 
+    Plug 'neomake/neomake'
+
 
     call plug#end()
 
