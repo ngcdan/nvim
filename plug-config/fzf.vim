@@ -17,14 +17,12 @@ let g:fzf_buffers_jump = 1
 " nnoremap <leader>t :Tags<CR>
 " nnoremap <leader>m :Marks<CR>
 noremap ` :Files<CR>
+noremap ; :Buffers<CR>
 
 " bind \ (backward slash) to grep shortcut
 nnoremap K :Ag <C-R><C-W><CR>
 nnoremap <C-k> /<C-R><C-W><CR>
 nnoremap \ :Ag<SPACE>
-
-
-
 
 let g:fzf_tags_command = 'ctags -R'
 " Border color

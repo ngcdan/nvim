@@ -1,8 +1,9 @@
 " Basic Key Mappings
-imap <C-h> <C-w>h
-imap <C-j> <C-w>j
-imap <C-k> <C-w>k
-imap <C-l> <C-w>l
+ imap <C-h> <C-w>h
+ imap <C-j> <C-w>j
+ imap <C-k> <C-w>k
+ imap <C-l> <C-w>l
+
 " g Leader key
 let mapleader=" "
 " let localleader=" "
@@ -35,6 +36,12 @@ vnoremap > >gv
   xnoremap K :move '<-2<CR>gv-gv
   xnoremap J :move '>+1<CR>gv-gv
 
+  inoremap <C-Z> <C-O>u
+  inoremap <C-Y> <C-O><C-R>
+
+  " Remove highlight 
+   map <C-h> :nohl<CR>
+
   " Alternate way to save
   nnoremap <silent> <C-s> :w<CR>
   " Alternate way to quit
@@ -44,11 +51,17 @@ vnoremap > >gv
   " <TAB>: completion.
   inoremap <silent> <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 
-  " Better window navigation
+  " Better window navigation, quicker window movement
   nnoremap <C-h> <C-w>h
   nnoremap <C-j> <C-w>j
   nnoremap <C-k> <C-w>k
   nnoremap <C-l> <C-w>l
+
+  " Get off my lawn 
+  nnoremap <Left> :echoe "Use h"<CR>
+  nnoremap <Right> :echoe "Use l"<CR>
+  nnoremap <Up> :echoe "Use k"<CR>
+  nnoremap <Down> :echoe "Use j"<CR>
 
   " Terminal window navigation
   tnoremap <C-h> <C-\><C-N><C-w>h
@@ -62,15 +75,15 @@ vnoremap > >gv
   tnoremap <Esc> <C-\><C-n>
 
   " Use alt + hjkl to resize windows
-   nnoremap <silent> <M-j>    :resize -2<CR>
-   nnoremap <silent> <M-k>    :resize +2<CR>
-   nnoremap <silent> <M-h>    :vertical resize -2<CR>
-   nnoremap <silent> <M-l>    :vertical resize +2<CR>
+"   nnoremap <silent> <M-j>    :resize -2<CR>
+"   nnoremap <silent> <M-k>    :resize +2<CR>
+"   nnoremap <silent> <M-h>    :vertical resize -2<CR>
+"   nnoremap <silent> <M-l>    :vertical resize +2<CR>
 
-"  nnoremap <silent> <C-Up>    :resize -2<CR>
-"  nnoremap <silent> <C-Down>  :resize +2<CR>
-"  nnoremap <silent> <C-Left>  :vertical resize -2<CR>
-"  nnoremap <silent> <C-Right> :vertical resize +2<CR>
+  nnoremap <silent> <C-Up>    :resize -2<CR>
+  nnoremap <silent> <C-Down>  :resize +2<CR>
+  nnoremap <silent> <C-Left>  :vertical resize -2<CR>
+  nnoremap <silent> <C-Right> :vertical resize +2<CR>
 
   let g:elite_mode=0                      " Disable arrows"
   " Disable arrow movement, resize splits instead.
