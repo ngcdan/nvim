@@ -27,23 +27,26 @@ set autoindent                          " Good auto indent
 set smartindent                         " Makes indenting smart
 set textwidth=120
 set colorcolumn=+1
-
 set fileencoding=utf-8                  " The encoding written to file
 set cmdheight=2                         " More space for displaying messages
 set iskeyword+=-                      	" treat dash separated words as a word text object"
 set mouse=a                            " Enable your mouse
-set splitbelow                          " Horizontal splits will automatically be below
-set splitright                          " Vertical splits will automatically be to the right
 set t_Co=256                            " Support 256 colors
 set conceallevel=0                      " So that I can see `` in markdown files
 set laststatus=0                        " Always display the status line
-" number 
 set number                              " Line numbers
 set relativenumber
 set numberwidth=4
 set nojoinspaces " use one space, not two, after punctuation 
+set list listchars=tab:»·,trail:·,nbsp:· " Display extra whitespace
+set tags^=.git/tags
+set splitbelow                          " Horizontal splits will automatically be below
+set splitright                          " Vertical splits will automatically be to the right
+set lazyredraw
+set termguicolors
 set cursorline                          " Enable highlighting of the current line
 set background=dark                     " tell vim what the background color looks like
+set signcolumn=yes
 set showtabline=2                       " Always show tabs
 set noshowmode                          " We don't need to see things like -- INSERT -- anymore
 set updatetime=300                      " Faster completion
