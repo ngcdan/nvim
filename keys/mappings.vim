@@ -12,14 +12,6 @@ nnoremap <Space> <Nop>
 vnoremap < <gv
 vnoremap > >gv
 
-if exists('g:vscode')
-
-  " Simulate same TAB behavior in VSCode
-  nmap <Tab> :Tabnext<CR>
-  nmap <S-Tab> :Tabprev<CR>
-
-else
-
   " Better nav for omnicomplete
   inoremap <expr> <c-j> ("\<C-n>")
   inoremap <expr> <c-k> ("\<C-p>")
@@ -29,8 +21,8 @@ else
   inoremap kj <Esc>
 
   " Easy CAPS
-  " inoremap <c-u> <ESC>viwUi
-  " nnoremap <c-u> viwU<Esc>
+   inoremap <c-u> <ESC>viwUi
+   nnoremap <c-u> viwU<Esc>
 
   " TAB in general mode will move to text buffer
   nnoremap <silent> <TAB> :bnext<CR>
@@ -70,15 +62,15 @@ else
   tnoremap <Esc> <C-\><C-n>
 
   " Use alt + hjkl to resize windows
-  " nnoremap <silent> <M-j>    :resize -2<CR>
-  " nnoremap <silent> <M-k>    :resize +2<CR>
-  " nnoremap <silent> <M-h>    :vertical resize -2<CR>
-  " nnoremap <silent> <M-l>    :vertical resize +2<CR>
+   nnoremap <silent> <M-j>    :resize -2<CR>
+   nnoremap <silent> <M-k>    :resize +2<CR>
+   nnoremap <silent> <M-h>    :vertical resize -2<CR>
+   nnoremap <silent> <M-l>    :vertical resize +2<CR>
 
-  nnoremap <silent> <C-Up>    :resize -2<CR>
-  nnoremap <silent> <C-Down>  :resize +2<CR>
-  nnoremap <silent> <C-Left>  :vertical resize -2<CR>
-  nnoremap <silent> <C-Right> :vertical resize +2<CR>
+"  nnoremap <silent> <C-Up>    :resize -2<CR>
+"  nnoremap <silent> <C-Down>  :resize +2<CR>
+"  nnoremap <silent> <C-Left>  :vertical resize -2<CR>
+"  nnoremap <silent> <C-Right> :vertical resize +2<CR>
 
   let g:elite_mode=0                      " Disable arrows"
   " Disable arrow movement, resize splits instead.
@@ -88,8 +80,6 @@ else
       nnoremap <C-Left>  :vertical resize -2<CR>
       nnoremap <C-Right> :vertical resize +2<CR>
   endif
-
-endif
 
 " Better nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")
