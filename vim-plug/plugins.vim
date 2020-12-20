@@ -62,8 +62,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'suy/vim-context-commentstring'
     " Better Comments
     Plug 'tpope/vim-commentary'
-    " Better Whitespace
-    Plug 'ntpeters/vim-better-whitespace'
     " Project manager 
     Plug 'mhinz/vim-startify'
         " live server
