@@ -21,6 +21,7 @@ noremap ; :Buffers<CR>
 
 " bind \ (backward slash) to grep shortcut
 " nnoremap K :Ag <C-R><C-W><CR>
+"  Tim tu trong current file con tro 
 nnoremap <C-k> /<C-R><C-W><CR>
 nnoremap \ :Ag<SPACE>
 
@@ -30,7 +31,6 @@ let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffse
 
 let $FZF_DEFAULT_OPTS = '--layout=reverse --inline-info'
 let $FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git/**'"
-"-g '!{node_modules,.git}'
 
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
