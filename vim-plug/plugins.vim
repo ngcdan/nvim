@@ -27,7 +27,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'sheerun/vim-polyglot'     " Better Syntax Support
     Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
     Plug 'joshdick/onedark.vim'     " themes 
-    " Plug 'morhetz/gruvbox' " themes 
     Plug 'kyazdani42/nvim-web-devicons'  " Cool Icons
     Plug 'ryanoasis/vim-devicons'
     Plug 'norcalli/nvim-colorizer.lua'     " Colorizer 
@@ -41,11 +40,10 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/fzf.vim' 
     Plug 'ChristianChiarulli/far.vim'         " Find and replace
     " Git
-    Plug 'airblade/vim-gitgutter'
-    Plug 'tpope/vim-fugitive'
+    Plug 'airblade/vim-gitgutter'                             "  git explorer 
+    Plug 'tpope/vim-fugitive'                                 " Use git in command 
     Plug 'tpope/vim-rhubarb'
     Plug 'junegunn/gv.vim'
-    Plug 'rhysd/git-messenger.vim' 
 
     Plug 'liuchengxu/vim-which-key'                           "  Which key shortcut
     Plug 'voldikss/vim-floaterm'                              "Floaterm 
@@ -56,6 +54,13 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
     " Plug 'justinmk/vim-sneak'                               " Sneak 
     "Plug 'neomake/neomake'                                   "  linting 
+    " Plug 'morhetz/gruvbox' " themes  
+    "     " Plug 'yuezk/vim-js'
+    " Plug 'maxmellon/vim-jsx-pretty'
+    " Plug 'jelera/vim-javascript-syntax' 
+    "
+    "
+  endif
 
     call plug#end()
 
