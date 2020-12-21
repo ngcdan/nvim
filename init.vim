@@ -32,7 +32,6 @@ source $HOME/.config/nvim/plug-config/vim-rooter.vim
 source $HOME/.config/nvim/plug-config/start-screen.vim
 source $HOME/.config/nvim/plug-config/gitgutter.vim
 source $HOME/.config/nvim/plug-config/closetags.vim
-source $HOME/.config/nvim/plug-config/floaterm.vim
 
 source $HOME/.config/nvim/themes/onedark.vim
 source $HOME/.config/nvim/themes/airline.vim
@@ -48,6 +47,7 @@ if !empty(glob("~/.config/nvim/paths.vim"))
   source $HOME/.config/nvim/paths.vim
 endif
 
+" source $HOME/.config/nvim/plug-config/floaterm.vim
 " source $HOME/.config/nvim/plug-config/signify.vim
 " source $HOME/.config/nvim/themes/gruvbox.vim
 " source $HOME/.config/nvim/plug-config/rnvimr.vim  

@@ -46,17 +46,18 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'junegunn/gv.vim'
 
     Plug 'liuchengxu/vim-which-key'                           "  Which key shortcut
-    Plug 'voldikss/vim-floaterm'                              "Floaterm 
 
     Plug 'mhinz/vim-startify'                                 " Project manager 
     Plug 'psliwka/vim-smoothie'                               " Smooth scroll ( cuon muot ma  )
-    Plug 'airblade/vim-rooter'     " Have the file system follow you around
+    Plug 'airblade/vim-rooter'     " Have the file system follow you around 
+    Plug 'maxmellon/vim-jsx-pretty'
 
+
+    " Plug 'voldikss/vim-floaterm'                              "Floaterm 
     " Plug 'justinmk/vim-sneak'                               " Sneak 
     "Plug 'neomake/neomake'                                   "  linting 
     " Plug 'morhetz/gruvbox' " themes  
     "     " Plug 'yuezk/vim-js'
-    " Plug 'maxmellon/vim-jsx-pretty'
     " Plug 'jelera/vim-javascript-syntax' 
     "
     "
