@@ -30,7 +30,6 @@
     "html",
     "yaml",
     "json",
-    "python",
     "java"
   ],
   "coc.preferences.hoverTarget": "float",

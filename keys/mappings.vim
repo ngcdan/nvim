@@ -13,41 +13,29 @@ nnoremap <Space> <Nop>
 vnoremap < <gv
 vnoremap > >gv
 
-  " Better nav for omnicomplete
-  inoremap <expr> <c-j> ("\<C-n>")
-  inoremap <expr> <c-k> ("\<C-p>")
+" Better nav for omnicomplete
+inoremap <expr> <c-j> ("\<C-n>")
+inoremap <expr> <c-k> ("\<C-p>")
 
-  " I hate escape more than anything else
-  inoremap jk <Esc>
-  inoremap kj <Esc>
+inoremap jk <Esc>
+inoremap kj <Esc>
 
-  " Easy CAPS
-   inoremap <c-u> <ESC>viwUi
-   nnoremap <c-u> viwU<Esc>
+" Easy CAPS
+ inoremap <c-u> <ESC>viwUi
+ nnoremap <c-u> viwU<Esc>
 
   " TAB in general mode will move to text buffer
-  nnoremap <silent> <TAB> :bnext<CR>
+ nnoremap <silent> <TAB> :bnext<CR>
   " SHIFT-TAB will go back
-  nnoremap <silent> <S-TAB> :bprevious<C>
+ nnoremap <silent> <S-TAB> :bprevious<C>
 
   " Move selected line / block of text in visual mode
-  " shift + k to move up
-  " shift + j to move down
   xnoremap K :move '<-2<CR>gv-gv
   xnoremap J :move '>+1<CR>gv-gv
-
-  inoremap <C-Z> <C-O>u
-  inoremap <C-Y> <C-O><C-R>
-
-  " Remove highlight 
-"   map <C-h> :nohl<CR>
-
   " Alternate way to save
   nnoremap <silent> <C-s> :w<CR>
-
-
   " Alternate way to quit
-  nnoremap <silent> <C-Q> :wq!<CR>
+  nnoremap <silent> <C-q> :wq!<CR>
   " Use control-c instead of escape
   nnoremap <silent> <C-c> <Esc>
   " <TAB>: completion.

@@ -4,32 +4,28 @@ let g:fzf_action = {
   \ 'ctrl-x': 'split',
   \ 'ctrl-v': 'vsplit' }
 
-" Enable per-command history.
-" CTRL-N and CTRL-P will be automatically bound to next-history and
-" previous-history instead of down and up. If you don't like the change,
-" explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
 let g:fzf_history_dir = '~/.local/share/fzf-history'
-let g:fzf_buffers_jump = 1
+let g:fzf_buffers_jump = 1 
 
 " map <C-f> :Files<CR>
 " map <leader>b :Buffers<CR>
 " nnoremap <leader>g :Rg<CR>
 " nnoremap <leader>t :Tags<CR>
 " nnoremap <leader>m :Marks<CR>
-noremap ` :Files<CR>
-noremap ; :Buffers<CR>
+" noremap ` :Files<CR>
+noremap ` :Buffers<CR>
 
 " bind \ (backward slash) to grep shortcut
-" nnoremap K :Ag <C-R><C-W><CR>
+nnoremap K :Ag <C-R><C-W><CR>
 "  Tim tu trong current file con tro 
 nnoremap <C-k> /<C-R><C-W><CR>
 nnoremap \ :Ag<SPACE>
 
 let g:fzf_tags_command = 'ctags -R'
 " Border color
-let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.5,'xoffset': 0.5, 'hghlight': 'Todo', 'border': 'sharp' } }
+let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.5,'yoffset':0.2,'xoffset': 0.2, 'hghlight': 'Todo', 'border': 'sharp' } }
 
-let $FZF_DEFAULT_OPTS = '--layout=reverse --inline-info'
+let $FZF_DEFAULT_OPTS = '--layout=reverse --inline-info --bind=ctrl-w:up,ctrl-m:down'
 let $FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git/**'"
 
 " Customize fzf colors to match your color scheme
@@ -52,9 +48,6 @@ let g:fzf_colors =
 command! -bang -nargs=? -complete=dir Files
     \ call fzf#vim#files(<q-args>, fzf#vim#with_preview({'options': ['--layout=reverse', '--inline-info']}), <bang>0)
 
-
-" Get text in files with Rg
-" command! -bang -nargs=* Rg
 "   \ call fzf#vim#grep(
 "   \   "rg --column --line-number --no-heading --color=always --smart-case --glob '!.git/**' ".shellescape(<q-args>), 1,
 
@@ -76,6 +69,8 @@ function! RipgrepFzf(query, fullscreen)
 endfunction
 
 command! -nargs=* -bang RG call RipgrepFzf(<q-args>, <bang>0)
+
+let g:ackprg = 'ag --vimgrep'
 
 " Git grep
 command! -bang -nargs=* GGrep

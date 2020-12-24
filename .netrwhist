@@ -1,0 +1,8 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/Users/linuss/Projects/typescript'
+let g:netrw_dirhist_5='/Users/linuss/Projects'
+let g:netrw_dirhist_4='/Users/linuss/Projects/java'
+let g:netrw_dirhist_3='/Users/linuss/Projects/java/ahaysoft'
+let g:netrw_dirhist_2='/Users/linuss/Projects/java'
+let g:netrw_dirhist_1='/Users/linuss/Projects'

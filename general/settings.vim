@@ -31,7 +31,7 @@ set fileencoding=utf-8                  " The encoding written to file
 set cmdheight=2                         " More space for displaying messages
 set iskeyword+=-                      	" treat dash separated words as a word text object"
 set mouse=a                            " Enable your mouse
-set t_Co=256                            " Support 256 colors
+set t_Co=256                            " Support 256 colors 
 set conceallevel=0                      " So that I can see `` in markdown files
 set laststatus=0                        " Always display the status line
 set number                              " Line numbers
@@ -53,7 +53,7 @@ set noshowmode                          " We don't need to see things like -- IN
 set updatetime=300                      " Faster completion
 set timeoutlen=500                      " By default timeoutlen is 1000 ms
 set formatoptions-=cro                  " Stop newline continution of comments
-set clipboard=unnamedplus               " Copy paste between vim and everything else
+set clipboard=unnamedplus               " Copy paste between vim and everything else 
 
 au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 

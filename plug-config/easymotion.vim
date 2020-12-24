@@ -15,7 +15,7 @@ map <Leader>k <Plug>(easymotion-k)
 
 " map  <Leader>f <Plug>(easymotion-bd-f)
 "  Move to line over windows 
-nmap <Leader>F <Plug>(easymotion-overwin-f)
+" nmap <Leader>F <Plug>(easymotion-overwin-f)
 
 " s{char}{char} to move to {char}{char}
 nmap <silent> s <Plug>(easymotion-s2)

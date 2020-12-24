@@ -10,13 +10,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-commentary'
     " Useful for React Commenting 
     Plug 'suy/vim-context-commentstring'
-
-  if exists('g:vscode')
-    " Easy motion for VSCode
-    Plug 'ChristianChiarulli/vscode-easymotion'
-    Plug 'machakann/vim-highlightedyank'
-  else
-
     Plug 'easymotion/vim-easymotion'     " Easymotion
     Plug 'tpope/vim-surround'     " Surround (support [], {}, '')
     Plug 'jiangmiao/auto-pairs'     " Auto pairs for '(' '[' '{'
@@ -26,7 +19,6 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'honza/vim-snippets'                                     " Snippets 
     Plug 'sheerun/vim-polyglot'     " Better Syntax Support
     Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
-    Plug 'joshdick/onedark.vim'     " themes 
     Plug 'kyazdani42/nvim-web-devicons'  " Cool Icons
     Plug 'ryanoasis/vim-devicons'
     Plug 'norcalli/nvim-colorizer.lua'     " Colorizer 
@@ -44,25 +36,20 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'tpope/vim-fugitive'                                 " Use git in command 
     Plug 'tpope/vim-rhubarb'
     Plug 'junegunn/gv.vim'
-
+    Plug 'voldikss/vim-floaterm'                              "Floaterm 
     Plug 'liuchengxu/vim-which-key'                           "  Which key shortcut
-
     Plug 'mhinz/vim-startify'                                 " Project manager 
     Plug 'psliwka/vim-smoothie'                               " Smooth scroll ( cuon muot ma  )
     Plug 'airblade/vim-rooter'     " Have the file system follow you around 
-    Plug 'maxmellon/vim-jsx-pretty'
-
-
-    " Plug 'voldikss/vim-floaterm'                              "Floaterm 
+    " Plug 'maxmellon/vim-jsx-pretty'
+    " Plug 'dracula/vim', { 'as': 'dracula' } " themes
+    " Plug 'morhetz/gruvbox' " themes  
+    Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
+    " Plug 'joshdick/onedark.vim'     " themes 
     " Plug 'justinmk/vim-sneak'                               " Sneak 
     "Plug 'neomake/neomake'                                   "  linting 
-    " Plug 'morhetz/gruvbox' " themes  
     "     " Plug 'yuezk/vim-js'
     " Plug 'jelera/vim-javascript-syntax' 
-    "
-    "
-  endif
-
     call plug#end()
 
     " Automatically install missing plugins on startup
