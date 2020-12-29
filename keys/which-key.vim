@@ -19,8 +19,6 @@ let g:which_key_sep = '→'
 
 " Coc Search & refactor
 nnoremap <leader>? CocSearch <C-R>=expand("<cword>")<CR><CR>
-let g:which_key_map['?'] = 'search word'
-
 " Not a fan of floating windows for this
 " let g:which_key_use_floating_win = 0
 " let g:which_key_max_size = 0
@@ -56,9 +54,6 @@ let g:which_key_map.a = {
       \ 's' : [':s/\%V\(.*\)\%V/"\1"/'   , 'surround'],
       \ 'r' : [':set norelativenumber!'  , 'relative line nums'],
       \ 't' : [':FloatermToggle'         , 'terminal'],
-      \ 'v' : [':Codi'                   , 'virtual repl on'],
-      \ 'V' : [':Codi!'                  , 'virtual repl off'],
-      \ 'w' : [':StripWhitespace'        , 'strip whitespace'],
       \ }
 
 " b is for buffer

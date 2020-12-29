@@ -6,10 +6,8 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
-    " Better Comments
     Plug 'tpope/vim-commentary'
-    " Useful for React Commenting 
-    Plug 'suy/vim-context-commentstring'
+    Plug 'suy/vim-context-commentstring' " Useful for React Commenting 
     Plug 'easymotion/vim-easymotion'     " Easymotion
     Plug 'tpope/vim-surround'     " Surround (support [], {}, '')
     Plug 'jiangmiao/auto-pairs'     " Auto pairs for '(' '[' '{'
@@ -33,17 +31,19 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     Plug 'ChristianChiarulli/far.vim'         " Find and replace
     " Git
     Plug 'airblade/vim-gitgutter'                             "  git explorer 
-    Plug 'tpope/vim-fugitive'                                 " Use git in command 
-    Plug 'tpope/vim-rhubarb'
     Plug 'junegunn/gv.vim'
     Plug 'voldikss/vim-floaterm'                              "Floaterm 
     Plug 'liuchengxu/vim-which-key'                           "  Which key shortcut
     Plug 'mhinz/vim-startify'                                 " Project manager 
     Plug 'psliwka/vim-smoothie'                               " Smooth scroll ( cuon muot ma  )
     Plug 'airblade/vim-rooter'     " Have the file system follow you around 
+
+    Plug 'leafgarland/typescript-vim'
+    Plug 'vim-utils/vim-man'
     " Plug 'maxmellon/vim-jsx-pretty'
     " Plug 'dracula/vim', { 'as': 'dracula' } " themes
-    " Plug 'morhetz/gruvbox' " themes  
+    Plug 'morhetz/gruvbox' " themes  
+ 
     " Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
     " Plug 'sainnhe/gruvbox-material'
     Plug 'joshdick/onedark.vim'     " themes 
