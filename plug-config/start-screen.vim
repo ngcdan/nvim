@@ -26,9 +26,9 @@ let g:startify_session_persistence = 1
 
 let g:webdevicons_enable_startify = 1
 
-"function! StartifyEntryFormat()
-"        return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
-"    endfunction
+function! StartifyEntryFormat()
+        return 'WebDevIconsGetFileTypeSymbol(absolute_path) ." ". entry_path'
+    endfunction
 
 let g:startify_bookmarks = [
             \ { 't': '~/Projects/java/ahaysoft/openfreightone/TASKS.md' },
@@ -36,6 +36,8 @@ let g:startify_bookmarks = [
             \ { 'z': '~/.zshrc.local' },
             \ '~/Projects/java/ahaysoft/openfreightone',
             \ '~/Projects/reactjs',
+            \ '~/Projects/javascript/',
+            \ '~/Projects/reactjs/react-flux-example',
             \ ]
 
 let g:startify_enable_special = 0 

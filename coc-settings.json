@@ -1,6 +1,4 @@
 {
-  // suggestions
-  // "suggest.echodocSupport": true,
   // TODO add more labels and give them cool glyphs
   "suggest.completionItemKindLabels": {
     "text": "t",
@@ -35,7 +33,7 @@
   "coc.preferences.hoverTarget": "float",
   // snippets
   "snippets.ultisnips.directories": ["UltiSnips", "~/.config/nvim/snips"],
-  "explorer.width": 30,
+  "explorer.width": 60,
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,
   "explorer.keyMappings.global": {

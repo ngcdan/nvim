@@ -16,9 +16,9 @@ let g:fzf_buffers_jump = 1
 noremap ` :Buffers<CR>
 
 " bind \ (backward slash) to grep shortcut
-nnoremap K :Ag <C-R><C-W><CR>
+nnoremap N :Ag <C-R><C-W><CR>
 "  Tim tu trong current file con tro 
-nnoremap <C-k> /<C-R><C-W><CR>
+nnoremap <C-n> /<C-R><C-W><CR>
 nnoremap \ :Ag<SPACE>
 
 let g:fzf_tags_command = 'ctags -R'

@@ -13,6 +13,9 @@ nnoremap <Space> <Nop>
 vnoremap < <gv
 vnoremap > >gv
 
+" close buffer 
+map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
+
 " Better nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")
@@ -33,11 +36,17 @@ inoremap kj <Esc>
   xnoremap K :move '<-2<CR>gv-gv
   xnoremap J :move '>+1<CR>gv-gv
   " Alternate way to save
-  nnoremap <silent> <C-s> :w<CR>
+  " nnoremap <silent> <C-s> :w<CR>
+  noremap <silent> <C-S>          :update<CR>
+  vnoremap <silent> <C-S>         <C-C>:update<CR>
+  inoremap <silent> <C-S>         <C-O>:update<CR>
+
   " Alternate way to quit
   nnoremap <silent> <C-q> :wq!<CR>
   " Use control-c instead of escape
   nnoremap <silent> <C-c> <Esc>
+  inoremap <silent> <C-c> <Esc>
+  xnoremap <silent> <C-c> <Esc>
   " <TAB>: completion.
   inoremap <silent> <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
 

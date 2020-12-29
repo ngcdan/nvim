@@ -44,8 +44,9 @@ call plug#begin('~/.config/nvim/autoload/plugged')
     " Plug 'maxmellon/vim-jsx-pretty'
     " Plug 'dracula/vim', { 'as': 'dracula' } " themes
     " Plug 'morhetz/gruvbox' " themes  
-    Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
-    " Plug 'joshdick/onedark.vim'     " themes 
+    " Plug 'gruvbox-material/vim', {'as': 'gruvbox-material'}
+    " Plug 'sainnhe/gruvbox-material'
+    Plug 'joshdick/onedark.vim'     " themes 
     " Plug 'justinmk/vim-sneak'                               " Sneak 
     "Plug 'neomake/neomake'                                   "  linting 
     "     " Plug 'yuezk/vim-js'

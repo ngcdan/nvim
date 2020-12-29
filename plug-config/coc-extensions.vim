@@ -17,7 +17,6 @@ let g:coc_global_extensions = [
   \ 'coc-pyright',
   \ 'coc-explorer',
   \ 'coc-svg',
-  \ 'coc-prettier',
   \ 'coc-vimlsp',
   \ 'coc-xml',
   \ 'coc-yank',
