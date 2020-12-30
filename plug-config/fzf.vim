@@ -7,8 +7,8 @@ let g:fzf_action = {
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 let g:fzf_buffers_jump = 1 
 
-map <C-f> :Files<CR>
-map <leader>p :GFiles<CR>
+nnoremap <C-p> :Files<CR>
+nnoremap <leader>p :GFiles<CR>
 " map <leader>b :Buffers<CR>
 " nnoremap <leader>g :Rg<CR>
 " nnoremap <leader>t :Tags<CR>
@@ -23,7 +23,7 @@ nnoremap \ :Ag<SPACE>
 
 " Border color
 let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.2,'xoffset': 0.2} }
-"let $FZF_DEFAULT_OPTS = '--layout=reverse --inline-info --bind=ctrl-w:up,ctrl-m:down'
+" let $FZF_DEFAULT_OPTS = '--layout=reverse --inline-info --bind=ctrl-w:up,ctrl-m:down'
 "let $FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git/**'"
 
 " Customize fzf colors to match your color scheme

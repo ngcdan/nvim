@@ -25,21 +25,20 @@ endif
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next) 
 
-" nmap <leader>rr <Plug>(coc-rename)
+nmap <leader>rr <Plug>(coc-rename)
 " nnoremap <leader>prw :CocSearch <C-R>=expand("<cword>")<CR><CR>
 
 " Formatting selected code.
-xmap <leader>F  <Plug>(coc-format-selected)
-nmap <leader>F  <Plug>(coc-format-selected)     
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)     
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-
 " Use K to show documentation in preview window.
- nnoremap <silent> <leader>K :call <SID>show_documentation()<CR>
+ nnoremap <silent> <leader>k :call <SID>show_documentation()<CR>
 function! s:show_documentation()
   if (index(['vim','help'], &filetype) >= 0)
     execute 'h '.expand('<cword>')
@@ -67,9 +66,9 @@ augroup end
 " nmap <leader>a  <Plug>(coc-codeaction-selected)
 
 " Remap keys for applying codeAction to the current line.
-" nmap <leader>ac  <Plug>(coc-codeaction)
+nmap <leader>ac  <Plug>(coc-codeaction)
 " Apply AutoFix to problem on the current line.
-" nmap <leader>qf  <Plug>(coc-fix-current)
+nmap <leader>qf  <Plug>(coc-fix-current)
 
 " Introduce function text object
 " NOTE: Requires 'textDocument.documentSymbol' support from the language server.
@@ -108,8 +107,8 @@ let g:coc_explorer_global_presets = {
 \   },
 \   'floatingLeftside': {
 \      'position': 'floating',
-\      'floating-position': 'left-center',
-\      'floating-width': 40,
+\      'floating-position': 'right-center',
+\      'floating-width': 50,
 \   },
 \   'floatingRightside': {
 \      'position': 'floating',
@@ -122,7 +121,7 @@ let g:coc_explorer_global_presets = {
 \ }
 "nmap <silent> <space>e :CocCommand explorer<CR>
 nnoremap <silent> <leader>e :CocCommand explorer<CR>
-nmap <space>f :CocCommand explorer --preset floatingRightside<CR>
+" nmap <space>f :CocCommand explorer --preset floatingRightside<CR>
 autocmd BufEnter * if (winnr("$") == 1 && &filetype == 'coc-explorer') | q | endif
 
 " Snippets

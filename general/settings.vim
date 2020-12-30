@@ -46,10 +46,6 @@ set showtabline=2                       " Always show tabs
 set noshowmode                          " We don't need to see things like -- INSERT -- anymore
 set updatetime=50                      " Faster completion
 set clipboard=unnamedplus               " Copy paste between vim and everything else 
-" configure backspace so it acts as it shoild act
-set backspace=eol,start,indent
-set whichwrap+=<,>,h,l
-
 " ingore case when searching 
 set ignorecase
 set incsearch                           "  makes search act like search in modern brosers
@@ -61,4 +57,3 @@ set magic
 set mat=2
 " au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 " You can't stop me
-cmap w!! w !sudo tee % 
