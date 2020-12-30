@@ -1,26 +1,47 @@
 " g Leader key
 let mapleader=" "
-" let localleader=" "
-nnoremap <Space> <Nop>
-
 " Better indenting
 vnoremap < <gv
 vnoremap > >gv
    
-" close buffer 
-map <leader>q :bp<bar>sp<bar>bn<bar>bd<CR>
- " move window navigation
-nnoremap <leader>h :wincmd h<CR>  
-nnoremap <leader>l :wincmd l<CR>  
-nnoremap <leader>k :wincmd k<CR>  
-nnoremap <leader>j :wincmd j<CR>  
-nnoremap <leader>pv :wincmd v<bar> :Ex <bar> :vertical resize 30<CR>
-nnoremap <leader>ps :Rg<SPACE>
+" close current buffer 
+map <leader>bd :bp<bar>sp<bar>bn<bar>bd<CR>
+
+" close all buffer
+map <leader>ba :BufOnly<CR>
+command! BufOnly silent! call Preserve("exec '%bd|e#|bd#'")
+
+" preserve function
+if !exists('*Preserve')
+    function! Preserve(command)
+        try
+            let l:win_view = winsaveview()
+            "silent! keepjumps keeppatterns execute a:command
+            silent! execute 'keeppatterns keepjumps ' . a:command
+        finally
+            call winrestview(l:win_view)
+        endtry
+    endfunction
+endif
+
+" move window navigation
+"nnoremap <leader>h :wincmd h<CR>  
+"nnoremap <leader>l :wincmd l<CR>  
+"nnoremap <leader>k :wincmd k<CR>  
+"nnoremap <leader>j :wincmd j<CR>  
+nnoremap <leader>/ :call Comment()<CR>
+nnoremap <leader>t :FloatermToggle<CR>
+map <silent> <leader><CR> :nohl<CR>
+
 " Better window navigation = leader 
- nnoremap <C-h> <C-w>h
- nnoremap <C-j> <C-w>j
- nnoremap <C-k> <C-w>k
- nnoremap <C-l> <C-w>l
+ " nnoremap <C-h> <C-w>h
+ " nnoremap <C-h> <C-w>h
+ " nnoremap <C-j> <C-w>j
+ " nnoremap <C-k> <C-w>k
+ map <C-l> <C-W>l
+ map <C-j> <C-W>j
+ map <C-k> <C-W>k
+ map <C-h> <C-W>h
 
 inoremap jk <Esc>
 inoremap kj <Esc>
@@ -30,15 +51,19 @@ inoremap kj <Esc>
  " SHIFT-TAB will go back
  nnoremap <silent> <S-TAB> :bprevious<C>
     
+" Opens a new tab with the current buffer's path
+" Super useful when editing files in the same directory
+map <leader>te :tabedit <C-r>=expand("%:p:h")<cr>
+
   " Move selected line / block of text in visual mode
   xnoremap K :move '<-2<CR>gv-gv
   xnoremap J :move '>+1<CR>gv-gv
- " Alternate way to save
-  nnoremap <silent> <C-s> :w<CR>
+ " Fast saving 
+  nmap <leader>w :w!<CR>
   " Alternate way to quit 
   nnoremap <silent> <C-Q> :wq!<CR>
-  " Alternate way to quit
-  nnoremap <silent> <C-q> :q<CR>
+  " Alternate way to quit don't save
+  nnoremap qq :q<CR>
   " Use control-c instead of escape
   nnoremap <silent> <C-c> <Esc>
   inoremap <C-c> <esc>
@@ -57,18 +82,6 @@ inoremap <expr> <c-k> ("\<C-p>")
  nnoremap <Right> :echoe "Use l"<CR>
  nnoremap <Up> :echoe "Use k"<CR>
  nnoremap <Down> :echoe "Use j"<CR>
-
-
-  " Terminal window navigation
-"  tnoremap <C-h> <C-\><C-N><C-w>h
-"  tnoremap <C-j> <C-\><C-N><C-w>j
-"  tnoremap <C-k> <C-\><C-N><C-w>k
-"  tnoremap <C-l> <C-\><C-N><C-w>l
-"  inoremap <C-h> <C-\><C-N><C-w>h
-"  inoremap <C-j> <C-\><C-N><C-w>j
-"  inoremap <C-k> <C-\><C-N><C-w>k
-"  inoremap <C-l> <C-\><C-N><C-w>l
-"  tnoremap <Esc> <C-\><C-n>
 
   " Mappings to resize windows
 nnoremap <silent> <C-Left>  :vertical resize -5<CR>
@@ -92,3 +105,20 @@ endif
 " Better nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")
 inoremap <expr> <c-k> ("\<C-p>")R
+
+" Pressing ,ss will toggle and untoggle spell checking
+map <leader>ss :setlocal spell!<cr>
+" Shortcuts using <leader>
+map <leader>sn ]s
+map <leader>sp [s
+map <leader>sa zg
+map <leader>s? z=
+
+" Delete trailing white space on save, useful for some filetypes ;)
+fun! CleanExtraSpaces()
+    let save_cursor = getpos(".")
+    let old_query = getreg('/')
+    silent! %s/\s\+$//e
+    call setpos('.', save_cursor)
+    call setreg('/', old_query)
+endfun

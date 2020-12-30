@@ -13,12 +13,10 @@ set history=50
 set pumheight=10                        " Makes popup menu smaller
 set ruler
 set showcmd
-set incsearch                           " Do incremental searching 
 set laststatus=2
 set autowrite
 set modelines=0
 set nomodeline
-set smartcase
 set tabstop=2                           " Insert 2 spaces for a tab
 set shiftwidth=2
 set shiftround
@@ -29,7 +27,7 @@ set smartindent                         " Makes indenting smart
 set textwidth=120
 set colorcolumn=+1
 set fileencoding=utf-8                  " The encoding written to file
-set cmdheight=2                         " More space for displaying messages
+set cmdheight=1                         "height of the command bar 
 set iskeyword+=-                      	" treat dash separated words as a word text object"
 set mouse=a                            " Enable your mouse
 set conceallevel=0                      " So that I can see `` in markdown files
@@ -47,10 +45,20 @@ set signcolumn=yes
 set showtabline=2                       " Always show tabs
 set noshowmode                          " We don't need to see things like -- INSERT -- anymore
 set updatetime=50                      " Faster completion
-set timeoutlen=300                      " By default timeoutlen is 1000 ms
 set clipboard=unnamedplus               " Copy paste between vim and everything else 
-au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
+" configure backspace so it acts as it shoild act
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
 
-
+" ingore case when searching 
+set ignorecase
+set incsearch                           "  makes search act like search in modern brosers
+set hlsearch
+set smartcase
+" For regular expressions turn magic on
+set magic
+" How many tenths of a second to blink when matching brackets
+set mat=2
+" au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 " You can't stop me
 cmap w!! w !sudo tee % 
