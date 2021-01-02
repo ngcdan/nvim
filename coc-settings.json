@@ -15,6 +15,18 @@
     "UltiSnips",
     "~/.config/nvim/snips"
   ],
+  "eslint.filetypes": [
+    "javascript",
+    "typescript",
+    "typescriptreact",
+    "javascriptreact"
+  ],
+  "eslint.options" : {
+    "env": {
+      "browser": true,
+      "node": true
+    }
+  },
   "explorer.width": 30,
   "explorer.icon.enableNerdfont": true,
   "explorer.previewAction.onHover": false,

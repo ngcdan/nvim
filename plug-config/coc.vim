@@ -24,7 +24,6 @@ endif
 nmap <silent> <leader>h <Plug>(coc-diagnostic-prev)
 nmap <silent> <leader>t <Plug>(coc-diagnostic-next)
 
-
 " Use K to show documentation in preview window
 " nnoremap <silent> K :call <SID>show_documentation()<CR>
 " function! s:show_documentation()

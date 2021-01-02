@@ -17,21 +17,17 @@ Plug 'tpope/vim-commentary'
 Plug 'honza/vim-snippets'                                     " Snippets 
 Plug 'easymotion/vim-easymotion'     " Easymotion
 
-" Modern JS support (indent, syntax, etc)
-Plug 'pangloss/vim-javascript'
-" JSX syntax
-Plug 'mxw/vim-jsx', { 'for': ['javascript.jsx'] }
-" Typescript syntax
-Plug 'HerringtonDarkholme/yats.vim'
-" JSON syntax
+
+" === Javascript Plugins === "
+Plug 'HerringtonDarkholme/yats.vim' " Typescript syntax highlighting
+Plug 'mxw/vim-jsx', { 'for': ['javascript.jsx'] } " JSX syntax
+Plug 'pangloss/vim-javascript' " Modern JS support (indent, syntax, etc)
 Plug 'sheerun/vim-json'
-" JS Documentation comments
-Plug 'heavenshell/vim-jsdoc', { 'on': ['JsDoc'] }
+Plug 'heavenshell/vim-jsdoc', { 'on': ['JsDoc'] } " JS Documentation comments
 
 " Lightline (simple status line)
 Plug 'itchyny/lightline.vim'
 
-Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
 Plug 'kyazdani42/nvim-web-devicons'  " Cool Icons
 Plug 'ryanoasis/vim-devicons'
 
@@ -45,10 +41,9 @@ Plug 'tpope/vim-fugitive'
 
 Plug 'voldikss/vim-floaterm'                              "Floaterm 
 Plug 'mhinz/vim-startify'                                 " Project manager 
-Plug 'psliwka/vim-smoothie'                               " Smooth scroll ( cuon muot ma  )
 
-Plug 'leafgarland/typescript-vim'
-Plug 'maxmellon/vim-jsx-pretty'
+" Plug 'leafgarland/typescript-vim'
+" Plug 'maxmellon/vim-jsx-pretty'
 Plug 'morhetz/gruvbox' " themes  
 
 call plug#end()
