@@ -1,9 +1,7 @@
 " set leader key
 let g:mapleader = "\<Space>"
 
-" syntax enable                           " Enables syntax highlighing
-" set hidden                              " Required to keep multiple buffers open multiple buffers
-
+set hidden                              " Required to keep multiple buffers open multiple buffers
 set encoding=utf-8                      " The encoding displayed
 set backspace=2                         " Backspace deletes like most program in insert mode 
 set nobackup                            " This is recommended by coc
@@ -46,11 +44,11 @@ set complete+=kspell
 set diffopt+=vertical
 
 set cursorline                          " Enable highlighting of the current line
-set cursorcolumn
+" set cursorcolumn
 
 " set signcolumn=yes  
-autocmd BufRead,BufNewFile * setlocal signcolumn=yes
-autocmd FileType tagbar,nerdtree setlocal signcolumn=no
+" autocmd BufRead,BufNewFile * setlocal signcolumn=yes
+" autocmd FileType tagbar,nerdtree setlocal signcolumn=no
 
 set updatetime=300                      " Faster completion
 
@@ -68,6 +66,15 @@ set background=dark                     " tell vim what the background color loo
 
 set backspace=indent,eol,start  " allow backspacing over everything in insert mode
 
+set cmdheight=2 " Give more space for displaying messages.
+set shortmess+=c    " Don't pass messages to |ins-completion-menu|.
+
+if has("patch-8.1.1564")
+  " Recently vim can merge signcolumn and number column into one
+  set signcolumn=number
+else
+  set signcolumn=yes
+endif
 filetype plugin indent on
 
 " Switch syntax highlighting on, when the terminal has colors
