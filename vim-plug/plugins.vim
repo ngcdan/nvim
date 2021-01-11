@@ -12,11 +12,17 @@ Plug 'tpope/vim-surround'     " Surround (support [], {}, '')
 Plug 'jiangmiao/auto-pairs'   " Auto pairs for '(' '[' '{'
 Plug 'alvan/vim-closetag'     " Close Tag
 Plug 'sheerun/vim-polyglot'     " Better Syntax Support
+Plug 'luochen1990/rainbow'
 
 Plug 'tpope/vim-commentary'
 Plug 'honza/vim-snippets'                                     " Snippets 
+ Plug 'mattn/emmet-vim'
 Plug 'easymotion/vim-easymotion'     " Easymotion
 
+" ====== Java Plugin ========== "
+Plug 'puremourning/vimspector', {'for': ['java']}
+Plug 'uiiaoo/java-syntax.vim' "better java syntax
+" Plug 'nvim-treesitter/nvim-treesitter'
 
 " === Javascript Plugins === "
 Plug 'HerringtonDarkholme/yats.vim' " Typescript syntax highlighting

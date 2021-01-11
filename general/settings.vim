@@ -12,19 +12,19 @@ set ruler
 set showcmd " display incomplete commands
 set laststatus=2
 set autowrite    " automatically :write before running commands
+set noshowmode
 
-set autoindent                          " Good auto indent
-set smartindent                         " Makes indenting smart
 
 " soft tabs , 2 spaces
 set tabstop=2                           " Insert 2 spaces for a tab
-set shiftwidth=2
+set shiftwidth=4
 set shiftround
 set expandtab                           " Converts tabs to spaces
+" set autoindent                          " Good auto indent
+set smartindent                         " Makes indenting smart
 
 " make it obvious where 80 characters is
-set textwidth=80
-set colorcolumn=+1
+set colorcolumn=80
 
 set nojoinspaces                        " use one space, not two, after punctuation 
 
@@ -50,7 +50,7 @@ set cursorline                          " Enable highlighting of the current lin
 " autocmd BufRead,BufNewFile * setlocal signcolumn=yes
 " autocmd FileType tagbar,nerdtree setlocal signcolumn=no
 
-set updatetime=300                      " Faster completion
+set updatetime=50                      " Faster completion
 
 set clipboard=unnamedplus               " Copy paste between vim and everything else 
 
@@ -68,6 +68,9 @@ set backspace=indent,eol,start  " allow backspacing over everything in insert mo
 
 set cmdheight=2 " Give more space for displaying messages.
 set shortmess+=c    " Don't pass messages to |ins-completion-menu|.
+set ttyfast
+
+set inccommand=split " for incsearch while sub ( neovim only )
 
 if has("patch-8.1.1564")
   " Recently vim can merge signcolumn and number column into one
@@ -83,3 +86,17 @@ if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
 
+"Java Support! Should go in compiler/ and ftplugin/
+augroup javaSu
+	autocmd!
+	autocmd FileType java compiler javac
+	au Filetype java setlocal makeprg=javac\ %\ -g
+	au Filetype java setlocal errorformat=%A%f:%l:\ %m,%-Z%p^,%-C%.%#
+	au FileType java noremap <buffer> <leader>8 :make<cr>:copen<cr>
+	au FileType java noremap <buffer> <leader>9 :!echo %\|awk -F. '{print $1}'\|xargs java<cr>
+augroup end
+
+ if executable('rg')
+ 	set grepprg=rg\ --vimgrep
+ 	set grepformat^=%f:%l:%c:%m
+ endif

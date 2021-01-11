@@ -10,7 +10,8 @@ nnoremap \ :Ag<SPACE>
 " Border color
 let g:fzf_layout = {'up':'~90%', 'window': { 'width': 0.8, 'height': 0.8,'yoffset':0.2,'xoffset': 0.2} }
 let $FZF_DEFAULT_OPTS='--reverse'
-let $FZF_DEFAULT_COMMAND='ag --skip-vcs-ignores -g ""'
+" let $FZF_DEFAULT_COMMAND='ag --skip-vcs-ignores -g ""'
+let $FZF_DEFAULT_COMMAND='ag --hidden --ignore .git -g ""'
 " Customize fzf colors to match your color scheme
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],

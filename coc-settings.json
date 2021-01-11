@@ -1,45 +1,69 @@
 {
-  "snippets.priority": 1,
-  "suggest.languageSourcePriority": 99,
-  "coc.source.file.priority": 2,
-  "coc.source.around.priority": 3,
-  "coc.source.buffer.priority": 4,
-  "diagnostic.errorSign": " ",
-  "diagnostic.warningSign": " ",
-  "diagnostic.infoSign": "",
-  "diagnostic.hintSign": " ",
-  "list.indicator": ">",
-  "list.selectedSignText": " ",
-  "coc.preferences.hoverTarget": "float",
-  "snippets.ultisnips.directories": [
-    "UltiSnips",
-    "~/.config/nvim/snips"
-  ],
-  "eslint.filetypes": [
-    "javascript",
-    "typescript",
-    "typescriptreact",
-    "javascriptreact"
-  ],
-  "eslint.options" : {
-    "env": {
-      "browser": true,
-      "node": true
-    }
-  },
-  "explorer.width": 30,
-  "explorer.icon.enableNerdfont": true,
-  "explorer.previewAction.onHover": false,
-  "explorer.keyMappings.global": {
-    "<cr>": [
-      "expandable?",
-      [
-        "expanded?",
-        "collapse",
-        "expand"
-      ],
-      "open"
+    "snippets.priority": 1,
+    "suggest.languageSourcePriority": 99,
+    "coc.source.file.priority": 2,
+    "coc.source.around.priority": 3,
+    "coc.source.buffer.priority": 4,
+    "diagnostic.errorSign": " ",
+    "diagnostic.warningSign": " ",
+    "diagnostic.infoSign": "",
+    "diagnostic.hintSign": " ",
+    "codeLens.enable": true,
+    "java.referencesCodeLens.enabled": true,
+    "java.implementationsCodeLens.enabled": true,
+    "java.completion.enabled": true,
+    "java.jdt.ls.vmargs": "-javaagent:/usr/local/share/lombok/lombok.jar",
+    "list.indicator": ">",
+    "list.selectedSignText": " ",
+    "coc.preferences.formatOnSaveFiletypes": [
+        "css",
+        "markdown",
+        "javascript",
+        "graphql",
+        "html",
+        "yaml",
+        "json",
+        "python",
+        "java"
     ],
-    "v": "open:vsplit"
-  }
+    "coc.preferences.hoverTarget": "float",
+    "emmet.includeLanguages": {
+        "vue-html": "html",
+        "javascript": "javascriptreact"
+    },
+    "css.validate": false,
+    "less.validate": false,
+    "scss.validate": false,
+    "wxss.validate": false,
+    "snippets.ultisnips.directories": [
+        "UltiSnips",
+        "~/.config/nvim/snips"
+    ],
+    "eslint.filetypes": [
+        "javascript",
+        "typescript",
+        "typescriptreact",
+        "javascriptreact"
+    ],
+    "eslint.options": {
+        "env": {
+            "browser": true,
+            "node": true
+        }
+    },
+    "explorer.width": 50,
+    "explorer.icon.enableNerdfont": true,
+    "explorer.previewAction.onHover": false,
+    "explorer.keyMappings.global": {
+        "<cr>": [
+            "expandable?",
+            [
+                "expanded?",
+                "collapse",
+                "expand"
+            ],
+            "open"
+        ],
+        "v": "open:vsplit"
+    }
 }
