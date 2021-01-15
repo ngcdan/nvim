@@ -1,4 +1,9 @@
 {
+    "suggest.completionItemKindLabels": {
+        "text": "t",
+        "method": "m",
+        "function": ""
+    },
     "snippets.priority": 1,
     "suggest.languageSourcePriority": 99,
     "coc.source.file.priority": 2,
@@ -8,7 +13,7 @@
     "diagnostic.warningSign": " ",
     "diagnostic.infoSign": "",
     "diagnostic.hintSign": " ",
-    "codeLens.enable": true,
+    "codeLens.enable": false,
     "java.referencesCodeLens.enabled": true,
     "java.implementationsCodeLens.enabled": true,
     "java.completion.enabled": true,
@@ -26,7 +31,6 @@
         "python",
         "java"
     ],
-    "coc.preferences.hoverTarget": "float",
     "emmet.includeLanguages": {
         "vue-html": "html",
         "javascript": "javascriptreact"

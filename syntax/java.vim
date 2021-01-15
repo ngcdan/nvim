@@ -1,12 +1,3 @@
-" note do not change the order...
-" some of them are overridding privous regrex 
-
-"this code made with build-in syntax regrex(and key words), and with some custome regrex(and
-"key words)
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-
 " gruvbox (dark)
 let orange = "#d65d0e" "special color for numbers
 let black = "#282828"
@@ -29,10 +20,6 @@ let white = "#a89984"
 " let purple = "#C678DD"
 " let cyan = "#56B6C2"
 " let white = "#ABB2BF"
-
-
-" you may chage the coloraccording to your will :)
-
 
 " main color (for left over words)
 syn match main "\w"

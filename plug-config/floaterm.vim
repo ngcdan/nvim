@@ -1,7 +1,7 @@
-let g:floaterm_keymap_toggle = '<F9>'
-let g:floaterm_keymap_next   = '<F10>'
-let g:floaterm_keymap_prev   = '<F11>'
-let g:floaterm_keymap_new    = '<F12>'
+let g:floaterm_keymap_toggle = '<F1>'
+let g:floaterm_keymap_next   = '<F2>'
+let g:floaterm_keymap_prev   = '<F3>'
+let g:floaterm_keymap_new    = '<F4>'
 
 " Floaterm
 let g:floaterm_gitcommit='floaterm'

@@ -75,3 +75,9 @@ map <leader>ss :setlocal spell!<cr>
 " Shortcuts using <leader>
 map <leader>sn ]s
 map <leader>sp [s
+
+" augroup autoindent
+" au!
+" autocmd BufWritePre * :normal migg=G`i
+" augroup End
+

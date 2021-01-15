@@ -12,7 +12,6 @@ Plug 'tpope/vim-surround'     " Surround (support [], {}, '')
 Plug 'jiangmiao/auto-pairs'   " Auto pairs for '(' '[' '{'
 Plug 'alvan/vim-closetag'     " Close Tag
 Plug 'sheerun/vim-polyglot'     " Better Syntax Support
-Plug 'luochen1990/rainbow'
 
 Plug 'tpope/vim-commentary'
 Plug 'honza/vim-snippets'                                     " Snippets 
@@ -51,6 +50,8 @@ Plug 'mhinz/vim-startify'                                 " Project manager
 " Plug 'leafgarland/typescript-vim'
 " Plug 'maxmellon/vim-jsx-pretty'
 Plug 'morhetz/gruvbox' " themes  
+Plug 'norcalli/nvim-colorizer.lua'
+Plug 'junegunn/rainbow_parentheses.vim'
 
 call plug#end()
 

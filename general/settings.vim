@@ -17,7 +17,7 @@ set noshowmode
 
 " soft tabs , 2 spaces
 set tabstop=2                           " Insert 2 spaces for a tab
-set shiftwidth=4
+set shiftwidth=2
 set shiftround
 set expandtab                           " Converts tabs to spaces
 " set autoindent                          " Good auto indent
