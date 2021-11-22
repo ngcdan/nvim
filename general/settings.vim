@@ -3,7 +3,7 @@ let g:mapleader = "\<Space>"
 
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set encoding=utf-8                      " The encoding displayed
-set backspace=2                         " Backspace deletes like most program in insert mode 
+set backspace=2                         " Backspace deletes like most program in insert mode
 set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
 set nowrap                              " Display long lines as just one line
@@ -24,9 +24,9 @@ set expandtab                           " Converts tabs to spaces
 set smartindent                         " Makes indenting smart
 
 " make it obvious where 80 characters is
-set colorcolumn=80
+set colorcolumn=120
 
-set nojoinspaces                        " use one space, not two, after punctuation 
+set nojoinspaces                        " use one space, not two, after punctuation
 
 set mouse=a                            " Enable your mouse
 
@@ -46,15 +46,15 @@ set diffopt+=vertical
 set cursorline                          " Enable highlighting of the current line
 " set cursorcolumn
 
-" set signcolumn=yes  
+" set signcolumn=yes
 " autocmd BufRead,BufNewFile * setlocal signcolumn=yes
 " autocmd FileType tagbar,nerdtree setlocal signcolumn=no
 
 set updatetime=50                      " Faster completion
 
-set clipboard=unnamedplus               " Copy paste between vim and everything else 
+set clipboard=unnamedplus               " Copy paste between vim and everything else
 
-" ingore case when searching 
+" ingore case when searching
 set ignorecase
 set incsearch                           "  makes search act like search in modern brosers
 set hlsearch
@@ -85,18 +85,3 @@ filetype plugin indent on
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
-
-"Java Support! Should go in compiler/ and ftplugin/
-augroup javaSu
-	autocmd!
-	autocmd FileType java compiler javac
-	au Filetype java setlocal makeprg=javac\ %\ -g
-	au Filetype java setlocal errorformat=%A%f:%l:\ %m,%-Z%p^,%-C%.%#
-	au FileType java noremap <buffer> <leader>8 :make<cr>:copen<cr>
-	au FileType java noremap <buffer> <leader>9 :!echo %\|awk -F. '{print $1}'\|xargs java<cr>
-augroup end
-
- if executable('rg')
- 	set grepprg=rg\ --vimgrep
- 	set grepformat^=%f:%l:%c:%m
- endif

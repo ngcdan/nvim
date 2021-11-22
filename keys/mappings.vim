@@ -9,7 +9,7 @@ nnoremap <Leader>\ :vsplit<CR>
 nnoremap <Leader>/ :split<CR>
 
 " close current buffer 
-map <leader>bd :bp<bar>sp<bar>bn<bar>bd<CR>
+" map <leader>bd :bp<bar>sp<bar>bn<bar>bd<CR>
 
 " close all buffer
 map <leader>ba :BufOnly<CR>
@@ -26,7 +26,7 @@ if !exists('*Preserve')
     endfunction
 endif
 
-" no hightlight search
+" no highlight search
 map <silent> <leader><space> :nohl<CR>
 
 " Better window navigation 
@@ -36,6 +36,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
 inoremap jk <Esc>
+inoremap kj <Esc>
 
 " Better nav for omnicomplete
 inoremap <expr> <c-j> ("\<C-n>")
@@ -65,19 +66,12 @@ nnoremap qq :q<CR>
 nnoremap <silent> <C-c> <Esc>
 
 " Mappings to resize windows
-nnoremap <silent> <C-Left>  :vertical resize -5<CR>
-nnoremap <silent> <C-Right> :vertical resize +5<CR>
 nnoremap <silent> <leader>- :vertical resize -8<CR>
-nnoremap <silent> <leader>+ :vertical resize +8<CR>
+nnoremap <silent> <leader>= :vertical resize +8<CR>
 
 " Pressing ,ss will toggle and untoggle spell checking
 map <leader>ss :setlocal spell!<cr>
 " Shortcuts using <leader>
 map <leader>sn ]s
 map <leader>sp [s
-
-" augroup autoindent
-" au!
-" autocmd BufWritePre * :normal migg=G`i
-" augroup End
 

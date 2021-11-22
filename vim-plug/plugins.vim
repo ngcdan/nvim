@@ -2,7 +2,8 @@
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
     silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
                 \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-    autocmd VimEnter * PlugInstall | source $MYVIMRC
+    "autocmd VimEnter * PlugInstall
+    "autocmd VimEnter * PlugInstall | source $MYVIMRC
 endif
 
 call plug#begin('~/.config/nvim/autoload/plugged')
@@ -11,10 +12,11 @@ Plug 'tpope/vim-repeat'    " Repeat stuff
 Plug 'tpope/vim-surround'     " Surround (support [], {}, '')
 Plug 'jiangmiao/auto-pairs'   " Auto pairs for '(' '[' '{'
 Plug 'alvan/vim-closetag'     " Close Tag
+
 Plug 'sheerun/vim-polyglot'     " Better Syntax Support
 
 Plug 'tpope/vim-commentary'
-Plug 'honza/vim-snippets'                                     " Snippets 
+Plug 'honza/vim-snippets'                                     " Snippets
  Plug 'mattn/emmet-vim'
 Plug 'easymotion/vim-easymotion'     " Easymotion
 
@@ -39,17 +41,17 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}     " intellisense
 " FZF
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim' 
+Plug 'junegunn/fzf.vim'
 " Git
-Plug 'airblade/vim-gitgutter'                             "  git explorer 
+Plug 'airblade/vim-gitgutter'                             "  git explorer
 Plug 'tpope/vim-fugitive'
 
-Plug 'voldikss/vim-floaterm'                              "Floaterm 
-Plug 'mhinz/vim-startify'                                 " Project manager 
+Plug 'voldikss/vim-floaterm'                              "Floaterm
+Plug 'mhinz/vim-startify'                                 " Project manager
 
 " Plug 'leafgarland/typescript-vim'
 " Plug 'maxmellon/vim-jsx-pretty'
-Plug 'morhetz/gruvbox' " themes  
+Plug 'morhetz/gruvbox' " themes
 Plug 'norcalli/nvim-colorizer.lua'
 Plug 'junegunn/rainbow_parentheses.vim'
 

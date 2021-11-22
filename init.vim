@@ -22,7 +22,7 @@ source $HOME/.config/nvim/plug-config/floaterm.vim
 source $HOME/.config/nvim/plug-config/closetags.vim
 source $HOME/.config/nvim/themes/lightnight.vim
 source $HOME/.config/nvim/plug-config/vimspector.vim
-source $HOME/.config/nvim/syntax/java.vim
 source $HOME/.config/nvim/plug-config/rainbow.vim
 source $HOME/.config/nvim/themes/gruvbox.vim
 luafile $HOME/.config/nvim/lua/plug-colorizer.lua
+
