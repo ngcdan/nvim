@@ -28,9 +28,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'morhetz/gruvbox' " themes
   Plug 'norcalli/nvim-colorizer.lua'
 
-if has("nvim") 
   Plug 'neovim/nvim-lspconfig'
-endif
-
+  Plug 'hrsh7th/nvim-compe'
+  Plug 'glepnir/lspsaga.nvim'
 call plug#end()
 

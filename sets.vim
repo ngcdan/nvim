@@ -18,10 +18,12 @@ set noshowmode
 " soft tabs , 2 spaces
 set tabstop=2                           " Insert 2 spaces for a tab
 set shiftwidth=2
-set shiftround
 set expandtab                           " Converts tabs to spaces
-" set autoindent                          " Good auto indent
-set smartindent                         " Makes indenting smart
+set softtabstop=0
+set smarttab
+set autoindent                          " Good auto indent
+" set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab
+" set smartindent                         " Makes indenting smart
 
 " make it obvious where 80 characters is
 set colorcolumn=120
