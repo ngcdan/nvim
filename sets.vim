@@ -1,4 +1,4 @@
-" set leader key
+" Better nav for omnicomplet" set leader key
 let g:mapleader = "\<Space>"
 
 set hidden                              " Required to keep multiple buffers open multiple buffers
@@ -33,7 +33,7 @@ set mouse=a                            " Enable your mouse
 set number relativenumber                             " Line numbers
 set numberwidth=5
 
-set list listchars=tab:»·,trail:·,space:· " Display extra whitespace
+" set list listchars=tab:»·,trail:·,space:· " Display extra whitespace
 
 set splitbelow splitright                         " Horizontal splits will automatically be below
 
@@ -44,12 +44,6 @@ set complete+=kspell
 set diffopt+=vertical
 
 set cursorline                          " Enable highlighting of the current line
-" set cursorcolumn
-
-" set signcolumn=yes
-" autocmd BufRead,BufNewFile * setlocal signcolumn=yes
-" autocmd FileType tagbar,nerdtree setlocal signcolumn=no
-
 set updatetime=50                      " Faster completion
 
 set clipboard=unnamedplus               " Copy paste between vim and everything else
@@ -85,3 +79,4 @@ filetype plugin indent on
 if (&t_Co > 2 || has("gui_running")) && !exists("syntax_on")
   syntax on
 endif
+
