@@ -20,5 +20,6 @@ source $HOME/.config/nvim/vim-plug/lspsaga.vim
 source $HOME/.config/nvim/vim-plug/cmp.vim
 source $HOME/.config/nvim/vim-plug/airline.vim
 source $HOME/.config/nvim/vim-plug/signify.vim
+" source $HOME/.config/nvim/vim-plug/which-key.vim
 source $HOME/.config/nvim/themes/gruvbox.vim
 

@@ -1,12 +1,12 @@
 " g Leader key
-let mapleader=" "
+let mapleader= " "
 
 " Better indenting
 vnoremap < <gv
 vnoremap > >gv
 
-nnoremap <Leader>\ :vsplit<CR>
-nnoremap <Leader>/ :split<CR>
+nnoremap <leader>\ :vsplit<CR>
+nnoremap <leader>/ :split<CR>
 
 " close current buffer 
 " map <leader>bd :bp<bar>sp<bar>bn<bar>bd<CR>
@@ -30,10 +30,11 @@ endif
 map <silent> <leader><space> :nohl<CR>
 
 " Better window navigation 
-nnoremap <C-h> <C-w>h
-nnoremap <C-j> <C-w>j
-nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+" Use cmd instead
+"nnoremap <C-h> <C-w>h
+"nnoremap <C-j> <C-w>j
+"nnoremap <C-k> <C-w>k
+"nnoremap <C-l> <C-w>l
 
 inoremap jk <Esc>
 inoremap kj <Esc>
@@ -46,8 +47,9 @@ inoremap <expr> <c-k> ("\<C-p>")
 nnoremap <silent> <TAB> :bnext<CR>
 " SHIFT-TAB will go back
 nnoremap <silent> <S-TAB> :bprevious<C>
+
 " <TAB>: completion.
-inoremap <silent> <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <silent> <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"-s>
 
 " Super useful when editing files in the same directory
 map <leader>te :tabedit<C-r>=expand("%:p:h")<cr>
@@ -65,7 +67,7 @@ nnoremap qq :q<CR>
 " Use control-c instead of escape
 nnoremap <silent> <C-c> <Esc>
 
-" Mappings to resize windows
+"Mappings to resize windows
 nnoremap <silent> <leader>- :vertical resize -8<CR>
 nnoremap <silent> <leader>= :vertical resize +8<CR>
 
@@ -74,4 +76,6 @@ map <leader>ss :setlocal spell!<cr>
 " Shortcuts using <leader>
 map <leader>sn ]s
 map <leader>sp [s
+
+
 
