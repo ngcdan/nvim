@@ -47,7 +47,6 @@ inoremap <expr> <c-k> ("\<C-p>")
 nnoremap <silent> <TAB> :bnext<CR>
 " SHIFT-TAB will go back
 nnoremap <silent> <S-TAB> :bprevious<C>
-
 " <TAB>: completion.
 inoremap <silent> <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"-s>
 
@@ -77,5 +76,16 @@ map <leader>ss :setlocal spell!<cr>
 map <leader>sn ]s
 map <leader>sp [s
 
+" FZF
+nnoremap <C-p> :GFiles<CR>
+nnoremap <leader>p :Files<CR>
+nnoremap <leader>g :Rg<CR>
+noremap ` :Buffers<CR>
+nnoremap K :Ag <C-R><C-W><CR>
 
+"  Tim tu trong current file con tro 
+nnoremap <leader>k /<C-R><C-W><CR>
+nnoremap \ :Ag<SPACE>
 
+" s{char}{char} to move to {char}{char}
+nmap <silent> s <Plug>(easymotion-s2)

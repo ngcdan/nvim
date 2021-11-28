@@ -6,6 +6,7 @@ set encoding=utf-8                      " The encoding displayed
 set backspace=2                         " Backspace deletes like most program in insert mode
 set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
+
 set nowrap                              " Display long lines as just one line
 set history=50
 set ruler
