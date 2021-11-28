@@ -18,16 +18,24 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'morhetz/gruvbox' " themes
 
-  Plug 'neovim/nvim-lspconfig'
+   Plug 'neovim/nvim-lspconfig'
+   Plug 'tami5/lspsaga.nvim', { 'branch': 'nvim51' }
 
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
-  Plug 'vim-airline/vim-airline'
-  Plug 'vim-airline/vim-airline-themes'
+
+  "Plug 'vim-airline/vim-airline'
+  "Plug 'vim-airline/vim-airline-themes'
 
   " GIT
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rhubarb'
+
+  " Icon
+  Plug 'kyazdani42/nvim-web-devicons'
+
+
+  Plug 'hoob3rt/lualine.nvim'
 
   " Plug 'liuchengxu/vim-which-key'
 

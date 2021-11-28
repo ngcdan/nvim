@@ -58,6 +58,7 @@ set hlsearch
 set smartcase
 
 set lazyredraw
+
 set termguicolors
 set background=dark                     " tell vim what the background color looks like
 
