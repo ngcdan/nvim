@@ -77,7 +77,8 @@ map <leader>sn ]s
 map <leader>sp [s
 
 " FZF
-nnoremap <C-p> :GFiles<CR>
+"List all files that are added in the git repo
+nnoremap <C-p> :GFiles<CR
 nnoremap <leader>p :Files<CR>
 nnoremap <leader>g :Rg<CR>
 noremap ` :Buffers<CR>
