@@ -18,14 +18,12 @@ call plug#begin('~/.config/nvim/autoload/plugged')
 
   Plug 'morhetz/gruvbox' " themes
 
-   Plug 'neovim/nvim-lspconfig'
-   Plug 'tami5/lspsaga.nvim', { 'branch': 'nvim51' }
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'tami5/lspsaga.nvim', { 'branch': 'nvim51' }
+  Plug 'RishabhRD/popfix'
+  Plug 'RishabhRD/nvim-lsputils'
 
   Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-
-
-  "Plug 'vim-airline/vim-airline'
-  "Plug 'vim-airline/vim-airline-themes'
 
   " GIT
   Plug 'tpope/vim-fugitive'

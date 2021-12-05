@@ -5,18 +5,21 @@ let mapleader= " "
 vnoremap < <gv
 vnoremap > >gv
 
-nnoremap <leader>\ :vsplit<CR>
+" SPLIT SCREENS 
+" Ctrl-w v
+nnoremap <leader>\ :vsplit<CR> 
+" Ctrl-w s
 nnoremap <leader>/ :split<CR>
 
-" close current buffer 
-" map <leader>bd :bp<bar>sp<bar>bn<bar>bd<CR>
+map <leader>bd :bp
 
-" close all buffer
-map <leader>ba :BufOnly<CR>
-command! BufOnly silent! call Preserve("exec '%bd|e#|bd#'")
+  " close all buffer
+map <leader>ba :bufonly<cr>
+
+command! bufonly silent! call preserve("exec '%bd|e#|bd#'")
 " preserve function
-if !exists('*Preserve')
-    function! Preserve(command)
+if !exists('*preserve')
+    function! preserve(command)
         try
             let l:win_view = winsaveview()
             silent! execute 'keeppatterns keepjumps ' . a:command
@@ -27,14 +30,16 @@ if !exists('*Preserve')
 endif
 
 " no highlight search
-map <silent> <leader><space> :nohl<CR>
+map <silent> <leader><space> :nohl<cr>
 
-" Better window navigation 
-" Use cmd instead
-"nnoremap <C-h> <C-w>h
-"nnoremap <C-j> <C-w>j
-"nnoremap <C-k> <C-w>k
-"nnoremap <C-l> <C-w>l
+" navigation 
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+
+" cycle focus ctrl-w w
+" previous window ctrl-w p
 
 inoremap jk <Esc>
 inoremap kj <Esc>
@@ -47,8 +52,6 @@ inoremap <expr> <c-k> ("\<C-p>")
 nnoremap <silent> <TAB> :bnext<CR>
 " SHIFT-TAB will go back
 nnoremap <silent> <S-TAB> :bprevious<CR>
-" <TAB>: completion.
-inoremap <silent> <expr><TAB> pumvisible() ? "\<C-n>" : "\<TAB>"-s>
 
 " Super useful when editing files in the same directory
 map <leader>te :tabedit<C-r>=expand("%:p:h")<cr>

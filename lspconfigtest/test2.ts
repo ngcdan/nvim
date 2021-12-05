@@ -1,4 +1,5 @@
 import foo from './test';
 
 
-foo();
+foo(5);
+

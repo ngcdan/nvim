@@ -53,7 +53,7 @@ set clipboard=unnamedplus               " Copy paste between vim and everything 
 
 " ingore case when searching
 set ignorecase
-set incsearch                           "  makes search act like search in modern brosers
+set incsearch                           " search and hightlight 
 set hlsearch
 set smartcase
 
