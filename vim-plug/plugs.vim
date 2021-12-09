@@ -11,8 +11,8 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'easymotion/vim-easymotion'     " Easymotion
 
   " FZF
-  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  Plug 'junegunn/fzf.vim'
+  "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  "Plug 'junegunn/fzf.vim'
 
   Plug 'mhinz/vim-startify'                                 " Project manager
 
@@ -32,6 +32,11 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   " Icon
   Plug 'kyazdani42/nvim-web-devicons'
 
+
+  " find
+  Plug 'nvim-lua/popup.nvim'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-telescope/telescope.nvim'
 
   Plug 'hoob3rt/lualine.nvim'
 

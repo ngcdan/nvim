@@ -8,7 +8,7 @@
 source $HOME/.config/nvim/vim-plug/plugs.vim
 source $HOME/.config/nvim/maps.vim
 source $HOME/.config/nvim/sets.vim
-source $HOME/.config/nvim/vim-plug/fzf.vim
+source $HOME/.config/nvim/vim-plug/telescope.vim
 source $HOME/.config/nvim/vim-plug/easymotion.vim
 source $HOME/.config/nvim/vim-plug/start-screen.vim
 source $HOME/.config/nvim/vim-plug/lsp-config.vim

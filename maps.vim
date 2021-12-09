@@ -74,6 +74,9 @@ nmap <leader>w :w!<CR>
 " Alternate way to quit 
 nnoremap qq :wq!<CR>
 
+" Select all
+nmap <C-a> gg<S-v>G
+
 " --------------------Indent, Format, Refactor------------------------
 " Better indenting
 vnoremap < <gv
@@ -88,25 +91,25 @@ map <leader>sn ]s
 map <leader>sp [s
 
 
-
 " ----------------- Search, Replace --------------------
 " No highlight search
 map <silent> <leader><space> :nohl<cr>
 
-nnoremap <C-p> :GFiles<CR>
-nnoremap <leader>p :Files<CR>
-nnoremap <leader>g :Rg<CR>
-
-
-noremap ; :Buffers<CR>
-" nnoremap K :Ag <C-R><C-W><CR>
-nnoremap <leader>k /<C-R><C-W><CR>
-nnoremap \ :Ag<SPACE>
+"nnoremap <C-p> :GFiles<CR>
+"nnoremap <leader>p :Files<CR>
+"nnoremap <leader>g :Rg<CR>
+"
+"
+"noremap ; :Buffers<CR>
+"" nnoremap K :Ag <C-R><C-W><CR>
+"nnoremap <leader>k /<C-R><C-W><CR>
+"nnoremap \ :Ag<SPACE>
 
 " ---------------------- Escape, Exit ------------------------
 " escape
 inoremap jk <Esc>
 inoremap kj <Esc>
-nnoremap <silent> <C-c> <Esc>
+"nnoremap <silent> <C-c> <Esc>
+map <silent> <C-c> <Esc>
 
 
