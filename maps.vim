@@ -11,15 +11,15 @@ nnoremap <leader>\ :vsplit<CR>
 " Ctrl-w s
 nnoremap <leader>/ :split<CR>
 
-map <leader>bd :bp
-
   " close all buffer
-map <leader>ba :bufonly<cr>
+map <leader>ba :Bufonly<cr>
 
-command! bufonly silent! call preserve("exec '%bd|e#|bd#'")
+
+command! Bufonly silent! call Preserve("exec '%bd|e#|bd#'")
+
 " preserve function
-if !exists('*preserve')
-    function! preserve(command)
+if !exists('*Preserve')
+    function! Preserve(command)
         try
             let l:win_view = winsaveview()
             silent! execute 'keeppatterns keepjumps ' . a:command
@@ -81,7 +81,7 @@ map <leader>sp [s
 
 " FZF
 "List all files that are added in the git repo
-nnoremap <C-p> :GFiles<CR
+nnoremap <C-p> :GFiles<CR>
 nnoremap <leader>p :Files<CR>
 nnoremap <leader>g :Rg<CR>
 noremap ` :Buffers<CR>
