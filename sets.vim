@@ -3,11 +3,9 @@ let g:mapleader = "\<Space>"
 
 set hidden                              " Required to keep multiple buffers open multiple buffers
 set encoding=utf-8                      " The encoding displayed
-set backspace=2                         " Backspace deletes like most program in insert mode
 set nobackup                            " This is recommended by coc
 set nowritebackup                       " This is recommended by coc
 
-set nowrap                              " Display long lines as just one line
 set history=50
 set ruler
 set showcmd " display incomplete commands
@@ -16,18 +14,16 @@ set autowrite    " automatically :write before running commands
 set noshowmode
 
 
-" soft tabs , 2 spaces
-set tabstop=2                           " Insert 2 spaces for a tab
+" indents
+filetype plugin indent on
 set shiftwidth=2
-set expandtab                           " Converts tabs to spaces
-set softtabstop=0
-set smarttab
+set tabstop=2                           " Insert 2 spaces for a tab
 set autoindent                          " Good auto indent
-" set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab
-" set smartindent                         " Makes indenting smart
+set smarttab
+set nowrap "No Wrap lines
+set backspace=indent,eol,start  " allow backspacing over everything in insert mode
 
-" make it obvious where 80 characters is
-set colorcolumn=120
+set wildignore+=*/node_modules/*
 
 set nojoinspaces                        " use one space, not two, after punctuation
 
@@ -47,6 +43,9 @@ set complete+=kspell
 set diffopt+=vertical
 
 set cursorline                          " Enable highlighting of the current line
+" make it obvious where 80 characters is
+set colorcolumn=120
+
 set updatetime=50                      " Faster completion
 
 set clipboard=unnamedplus               " Copy paste between vim and everything else
@@ -62,7 +61,6 @@ set lazyredraw
 set termguicolors
 set background=dark                     " tell vim what the background color looks like
 
-set backspace=indent,eol,start  " allow backspacing over everything in insert mode
 
 set cmdheight=2 " Give more space for displaying messages.
 set shortmess+=c    " Don't pass messages to |ins-completion-menu|.

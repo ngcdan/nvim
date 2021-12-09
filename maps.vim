@@ -1,19 +1,57 @@
 " g Leader key
 let mapleader= " "
 
-" Better indenting
-vnoremap < <gv
-vnoremap > >gv
 
-" SPLIT SCREENS 
-" Ctrl-w v
+" -------------------- Navigation, Window--------------------
+" Split 
 nnoremap <leader>\ :vsplit<CR> 
-" Ctrl-w s
+nnoremap ss :vsplit<CR> 
 nnoremap <leader>/ :split<CR>
+nnoremap sv :split<CR>
 
-  " close all buffer
-map <leader>ba :Bufonly<cr>
+" resize 
+nnoremap <silent> <leader>- :vertical resize -8<CR>
+nnoremap <silent> <leader>= :vertical resize +8<CR>
 
+" window focus
+nnoremap <c-h> <c-w>h
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-l> <c-w>l
+
+" Get off my lawn
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
+
+" Better nav for omnicomplete
+inoremap <expr> <c-j> ("\<C-n>")
+inoremap <expr> <c-k> ("\<C-p>")
+
+" " <Leader>f{char} to move to {char}
+map  <Leader>f <Plug>(easymotion-bd-f)
+nmap <Leader>f <Plug>(easymotion-overwin-f)
+nmap <silent> f <Plug>(easymotion-s2)
+nmap <Leader>l <Plug>(easymotion-overwin-line)
+
+" Search n-chars
+map / <Plug>(easymotion-sn)
+
+" Tabs
+nnoremap <silent> <TAB> :bnext<CR>
+nnoremap <silent> <S-TAB> :bprevious<CR>
+
+" -------------------- Project -------------------------
+"" NERD tree configuration
+" noremap <C-d> :NERDTreeToggle<CR>
+" nnoremap F :NERDTreeFind<CR>
+" let NERDTreeShowHidden=1
+"
+
+" --------------Edit--------------------
+" close all buffer
+nmap ba :Bufonly<cr>
 
 command! Bufonly silent! call Preserve("exec '%bd|e#|bd#'")
 
@@ -29,67 +67,46 @@ if !exists('*Preserve')
     endfunction
 endif
 
-" no highlight search
-map <silent> <leader><space> :nohl<cr>
-
-" navigation 
-nnoremap <c-h> <c-w>h
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-l> <c-w>l
-
-" cycle focus ctrl-w w
-" previous window ctrl-w p
-
-inoremap jk <Esc>
-inoremap kj <Esc>
-
-" Better nav for omnicomplete
-inoremap <expr> <c-j> ("\<C-n>")
-inoremap <expr> <c-k> ("\<C-p>")
-
-" TAB in general mode will move to text buffer
-nnoremap <silent> <TAB> :bnext<CR>
-" SHIFT-TAB will go back
-nnoremap <silent> <S-TAB> :bprevious<CR>
-
-" Super useful when editing files in the same directory
-map <leader>te :tabedit<C-r>=expand("%:p:h")<cr>
-
-" Move selected line / block of text in visual mode
-xnoremap K :move '<-2<CR>gv-gv
-xnoremap J :move '>+1<CR>gv-gv
+map te :tabedit<C-r>=expand("%:p:h")<cr>
 
 " Fast saving 
 nmap <leader>w :w!<CR>
 " Alternate way to quit 
-nnoremap <silent> <C-q> :wq!<CR>
-" Alternate way to quit don't save
-nnoremap qq :q<CR>
-" Use control-c instead of escape
-nnoremap <silent> <C-c> <Esc>
+nnoremap qq :wq!<CR>
 
-"Mappings to resize windows
-nnoremap <silent> <leader>- :vertical resize -8<CR>
-nnoremap <silent> <leader>= :vertical resize +8<CR>
+" --------------------Indent, Format, Refactor------------------------
+" Better indenting
+vnoremap < <gv
+vnoremap > >gv
+" Move selected line / block of text in visual mode
+xnoremap K :move '<-2<CR>gv-gv
+xnoremap J :move '>+1<CR>gv-gv
 
-" Pressing ,ss will toggle and untoggle spell checking
+" spell checking
 map <leader>ss :setlocal spell!<cr>
-" Shortcuts using <leader>
 map <leader>sn ]s
 map <leader>sp [s
 
-" FZF
-"List all files that are added in the git repo
+
+
+" ----------------- Search, Replace --------------------
+" No highlight search
+map <silent> <leader><space> :nohl<cr>
+
 nnoremap <C-p> :GFiles<CR>
 nnoremap <leader>p :Files<CR>
 nnoremap <leader>g :Rg<CR>
-noremap ` :Buffers<CR>
-nnoremap K :Ag <C-R><C-W><CR>
 
-"  Tim tu trong current file con tro 
+
+noremap ; :Buffers<CR>
+" nnoremap K :Ag <C-R><C-W><CR>
 nnoremap <leader>k /<C-R><C-W><CR>
 nnoremap \ :Ag<SPACE>
 
-" s{char}{char} to move to {char}{char}
-nmap <silent> s <Plug>(easymotion-s2)
+" ---------------------- Escape, Exit ------------------------
+" escape
+inoremap jk <Esc>
+inoremap kj <Esc>
+nnoremap <silent> <C-c> <Esc>
+
+
