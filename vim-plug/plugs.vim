@@ -10,35 +10,33 @@ call plug#begin('~/.config/nvim/autoload/plugged')
   Plug 'jiangmiao/auto-pairs'   " Auto pairs for '(' '[' '{'
   Plug 'easymotion/vim-easymotion'     " Easymotion
 
-  " FZF
-  "Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-  "Plug 'junegunn/fzf.vim'
-
   Plug 'mhinz/vim-startify'                                 " Project manager
-
-  Plug 'morhetz/gruvbox' " themes
 
   Plug 'neovim/nvim-lspconfig'
   Plug 'tami5/lspsaga.nvim', { 'branch': 'nvim51' }
   Plug 'RishabhRD/popfix'
   Plug 'RishabhRD/nvim-lsputils'
+	
+	"Fi  le Explorer
+	Plug 'kyazdani42/nvim-tree.lua'
 
-  Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-
-  " GIT
+  " Git
   Plug 'tpope/vim-fugitive'
   Plug 'tpope/vim-rhubarb'
 
-  " Icon
-  Plug 'kyazdani42/nvim-web-devicons'
-
-
-  " find
+  " Find
   Plug 'nvim-lua/popup.nvim'
   Plug 'nvim-lua/plenary.nvim'
   Plug 'nvim-telescope/telescope.nvim'
 
+	" Theme
+  Plug 'eddyekofo94/gruvbox-flat.nvim'
+	" Status line
   Plug 'hoob3rt/lualine.nvim'
+  " Icon
+  Plug 'kyazdani42/nvim-web-devicons'
+
+  Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 
 call plug#end()
 

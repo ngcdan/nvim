@@ -73,6 +73,7 @@ map te :tabedit<C-r>=expand("%:p:h")<cr>
 nmap <leader>w :w!<CR>
 " Alternate way to quit 
 nnoremap qq :wq!<CR>
+nnoremap <leader>q :q!<CR>
 
 " Select all
 nmap <C-a> gg<S-v>G
